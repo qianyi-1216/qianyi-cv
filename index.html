@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王千一 - 个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 中央民族大学校徽水印 */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="120" fill="rgba(157, 34, 53, 0.03)" transform="rotate(45 100 100)">民大</text></svg>');
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px 30px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #9d2235;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #9d2235;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+
+        .contact-item i {
+            color: #9d2235;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #9d2235;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 i {
+            margin-right: 10px;
+        }
+
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #f0f0f0;
+        }
+
+        .education-item:last-child, .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .item-subtitle {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            color: #9d2235;
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #f8f0f1;
+            color: #9d2235;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            border: 1px solid #f0d4d8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+                margin: 15px auto;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+            
+            .item-date {
+                margin-top: 5px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            body::after {
+                display: none;
+            }
+            
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>王千一</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-venus"></i>
+                    <span>女 | 24岁</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>13180277365</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>qianyi1216@163.com</span>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <h2><i class="fas fa-graduation-cap"></i>教育背景</h2>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">中央民族大学</div>
+                    <div class="item-date">2023-2026</div>
+                </div>
+                <div class="item-subtitle">硕士 - 中国史 | 成绩排名: 1/48</div>
+                <ul>
+                    <li>担任团委组织委员，组织日常团学活动；</li>
+                    <li>获得国家奖学金与特等奖学金。</li>
+                </ul>
+            </div>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">中央民族大学</div>
+                    <div class="item-date">2019-2023</div>
+                </div>
+                <div class="item-subtitle">本科 - 历史</div>
+                <ul>
+                    <li>担任中韩文化交流协会宣传部部长，管理社团公众号，负责组织各项社团活动；</li>
+                    <li>担任学院办公室部长，协调学院其他部门组织院级活动；</li>
+                    <li>连续三年获得二等奖学金，获评优秀毕业论文。</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-briefcase"></i>实习经历</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">北京字节跳动科技有限公司 - HRBP招聘</div>
+                    <div class="item-date">2025.04-2025.07</div>
+                </div>
+                <ul>
+                    <li>支持Data搜索与Seed应用两个算法团队的校招与头部AI人才计划；</li>
+                    <li>个人souring推荐通过率78%，日常实习生offer11，筋斗云计划offer1，Top Seed offer2；</li>
+                    <li>参与设计专项内推激励政策，探索内推创新玩法。</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">北京字节跳动科技有限公司 - Data部门助理</div>
+                    <div class="item-date">2025.06-2025.09</div>
+                </div>
+                <ul>
+                    <li>策划组织Data二级部门H1及Q2重大活动，如业务表彰会和部门团建；</li>
+                    <li>承担部门日常行政事务，包括日常费用管理、SP类采购与发放和制度传达；</li>
+                    <li>撰写重要团建攻略、羽毛球赛事工作标准及流程，并给出创新性建议。</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">中华书局 - 文创部实习生</div>
+                    <div class="item-date">2022.10-2023.01</div>
+                </div>
+                <ul>
+                    <li>从0-1开拓中华书局的"中华观物"文创品牌，设计并推出多款文创产品；</li>
+                    <li>协助策划并落地中华书局110周年庆内部庆典活动；</li>
+                    <li>编写小红书、微信公众号宣传文案，制作有赞店铺内宣传图、版头、商品详情页。</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-flask"></i>科研与学术成果</h2>
+            <ul>
+                <li>参与国家社科基金一般项目《当代中国殡葬改革的路径创新研究》、国家社科基金一般项目《民族地区国家殡葬改革试点的跟踪调查研究》、国家民政部专项委托课题《进一步完善殡葬领域应急处置机制构建研究》、国家民委一般项目《回民殡葬管理问题研究》、中央民族大学青年团队科研项目《中国共产党治理典型社会问题的历史经验研究》等科研课题；</li>
+                <li>发表《大城市治理露天焚烧冥纸的做法与启示》于《中国民政》2024年11月刊；</li>
+                <li>参与撰写《<中华民族共同体概论>教材学生学习情况研究报告》收录于《中华民族共同体建设发展报告》；</li>
+                <li>3篇科研成果获国家民政部领导肯定性批示；</li>
+                <li>民政部专项委托课题成果获2024年度民政部政策理论研究成果一等奖。</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-trophy"></i>荣誉奖项</h2>
+            <ul>
+                <li>2025年中央民族大学国家奖学金</li>
+                <li>2024年民政政策理论研究一等奖</li>
+                <li>2024年中央民族大学特等奖学金</li>
+                <li>2023年中央民族大学一等奖学金</li>
+                <li>2022年第15届中国大学生计算机设计大赛国家级三等奖</li>
+                <li>2019-2022连续三年中央民族大学二等奖学金</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-star"></i>个人优势</h2>
+            <div class="skills">
+                <div class="skill-tag">组织协调能力</div>
+                <div class="skill-tag">招聘与人才管理</div>
+                <div class="skill-tag">学术研究能力</div>
+                <div class="skill-tag">政策分析</div>
+                <div class="skill-tag">跨文化沟通</div>
+                <div class="skill-tag">Office办公软件</div>
+                <div class="skill-tag">英语六级</div>
+                <div class="skill-tag">创新思维</div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>更新日期: 2025年10月 | 在线简历</p>
+        </footer>
+    </div>
+</body>
+</html>
